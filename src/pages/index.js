@@ -24,18 +24,28 @@ import SEO from "../components/seo"
 export default function IndexPage () {
   const data = useStaticQuery(graphql`
     query {
-      allFile(filter: {relativePath: {in: [
-        "logo_aaee.png", 
-        "logo_klee.png",
-        "undraw_creativity.png",
-        "undraw_dev.png",
-        "undraw_health.png",
-      ]}}) {
+      allFile(
+      filter: {relativePath: {in: [
+        "01_logo_aaee.png", 
+        "00_logo_klee.png",
+        "02_undraw_creativity.png",
+        "03_undraw_dev.png",
+        "04_undraw_health.png",
+        "05_photo_profil.png",
+      ]}},
+      sort: {
+        fields: relativePath,
+        order: ASC
+      }
+      ) {
         edges {
           node {
             relativePath,
             absolutePath,
             childImageSharp {
+              fixedPicture: fixed(width: 180, height: 180) {
+                ...GatsbyImageSharpFixed
+              },
               fixedLogo: fixed(width: 150, height: 50) {
                 ...GatsbyImageSharpFixed
               },
@@ -53,12 +63,24 @@ export default function IndexPage () {
     <Layout>
       <SEO title="Chloé Corfmat" />
       <div className="pl-10 pr-10 md:pl-20 ml:pr-20 xl:pl-40 xl:pr-40">
-        <h1 className="text-5xl">Bonjour ! <span role="img" aria-label="Hello emoji">👋</span></h1>
-        <p className="font-bold text-xl">Je m'appelle Chloé,</p>
-        <div className="mb-5 text-lg">
-          <p>Chaque jour, blabla.</p>
-          <p>J'attache beaucoup d'importance à l'accessibilité web, à la qualité du code que j'écris...</p>
+        <div className="mb-5 md:mb-10 md:flex md:flex-row-reverse md:justify-center md:items-center">
+          <Img
+            fixed={data.allFile.edges[5].node.childImageSharp.fixedPicture}
+          />
+          <div className="md:mr-10 md:w-2/3">
+            <h1 className="text-5xl">Bonjour ! <span role="img" aria-label="Hello emoji">👋</span></h1>
+            <p className="font-bold text-xl">Je m'appelle Chloé,</p>
+            <div className="mb-5 text-lg">
+              <p>Chaque jour, blabla.</p>
+              <p>J'attache beaucoup d'importance à l'accessibilité web, à la qualité du code que j'écris...</p>
+            </div>
+          </div>
         </div>
+
+        <blockquote className="m-auto mt-10 mb-5 md:w-1/2 text-center text-sm text-custom-pink">
+          <p className="font-black italic">Les batailles de la vie ne sont pas gagnées par les plus forts, ni par les plus rapides, mais par ceux qui n'abandonnent jamais.</p>
+          <footer className="text-right">—Hassan II</footer>
+        </blockquote>
 
         <h2 className="text-3xl">Actuellement</h2>
         <ul className="flex flex-col lg:flex-row mb-5">
@@ -200,7 +222,7 @@ export default function IndexPage () {
                 <span className="sr-only">Notion</span>
               </Link>
             </li>*/}
-            <li className="inline pl-3 pr-3">
+            {/*<li className="inline pl-3 pr-3">
               <Link
                 to="https://linktr.ee/chloecorfmat"
                 target="_blank"
@@ -210,7 +232,7 @@ export default function IndexPage () {
                 <FontAwesomeIcon icon={faLink} size="lg" />
                 <span className="sr-only">Linktr.ee</span>
               </Link>
-            </li>
+            </li>*/}
             <li className="inline pl-3 pr-3">
               <Link
                 to="https://www.instagram.com/missbichettefr/"
