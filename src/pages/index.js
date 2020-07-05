@@ -14,8 +14,8 @@ import {
 
 import {
   faGlobeEurope,
-  faPortrait,
-  faLink
+  //faPortrait,
+  //faLink
 } from '@fortawesome/free-solid-svg-icons'
 
 import Layout from "../components/layout"
@@ -46,18 +46,20 @@ export default function IndexPage () {
               fixedPicture: fixed(width: 180, height: 180) {
                 ...GatsbyImageSharpFixed
               },
-              fixedLogo: fixed(width: 150, height: 50) {
+              fixedLogo: fixed(width: 200, height: 50) {
                 ...GatsbyImageSharpFixed
               },
-              fixedUndraw: fixed(width: 200, height: 180) {
+              fixedUndraw: fixed(width: 200, height: 200) {
                 ...GatsbyImageSharpFixed
               }
-            }
+            },
           }
         }
       }
     }
   `)
+
+  console.log(data);
 
   return (
     <Layout>
@@ -70,9 +72,9 @@ export default function IndexPage () {
           <div className="md:mr-10 md:w-2/3">
             <h1 className="text-5xl">Bonjour ! <span role="img" aria-label="Hello emoji">👋</span></h1>
             <p className="font-bold text-xl">Je m'appelle Chloé,</p>
-            <div className="mb-5 text-lg">
-              <p>Chaque jour, blabla.</p>
-              <p>J'attache beaucoup d'importance à l'accessibilité web, à la qualité du code que j'écris...</p>
+            <div className="mb-5">
+              <p className="text-lg">Chaque jour, je <strong className="font-bold">développe des applications web</strong> qui répondent aux <em className="italic">besoins</em> des clients avec lesquels je travaille.</p>
+              <p className="mt-2">J'attache beaucoup d'importance à l'<strong className="font-bold">accessibilité web</strong>, à la <strong className="font-bold">qualité du code</strong> que j'écris, au <strong className="font-bold">référencement naturel</strong> de l'application ou encore à sa <strong className="font-bold">sécurité</strong>.</p>
             </div>
           </div>
         </div>
@@ -93,10 +95,12 @@ export default function IndexPage () {
               <p className="text-sm">Depuis septembre 2019</p>
             </div>
             <p className="italic">Ingénieure web</p>
-            <p className="mt-3">Parmi mes missions : </p>
+            <p className="mt-3 underline">Mes missions : </p>
             <ul className="list-disc list-outside">
-              <li>toto</li>
-              <li>titi</li>
+              <li>Proposer des solutions techniques</li>
+              <li>Développer des applications web métier (avec notamment Drupal 8)</li>
+              <li>Garantir le respect des bonnes pratiques (sécurité, accessibilité, référencement...)</li>
+              <li>Participer aux cérémonies agiles des projets</li>
             </ul>
           </li>
           <li className="mt-5 pl-10 pt-5 pr-10 pb-5 bg-gray-200 lg:w-1/2 lg:ml-10">
@@ -106,10 +110,12 @@ export default function IndexPage () {
               <p className="text-sm">Depuis février 2020</p>
             </div>
             <p className="italic">Membre du Conseil d'Administration de l'Association</p>
-            <p className="mt-3">Les objectifs de l'association : </p>
+            <p className="mt-3 underline">Les objectifs de l'association : </p>
             <ul className="list-disc list-outside">
-              <li>toto</li>
-              <li>titi</li>
+              <li>Développer et animer le réseau des anciens élèves</li>
+              <li>Aider à la recherche d'emploi et faciliter les contacts entreprises/diplômés</li>
+              <li>Aider les étudiants en difficulté (financièrement ou dans la recherche de stage par exemple)</li>
+              <li>Promouvoir l'Enssat et l'ingénieur Enssat</li>
             </ul>
           </li>
         </ul>
@@ -127,8 +133,8 @@ export default function IndexPage () {
             <Img
               fixed={data.allFile.edges[4].node.childImageSharp.fixedUndraw}
             />
-            <h3 className="font-bold">Zéro déchet, cuisine, bien-être</h3>
-            <p>Depuis plusieurs années, je mets en place des actions qui permettent, selon moi, d'améliorer mon quotidien.</p>
+            <h3 className="font-bold">Écologie, santé, bien-être</h3>
+            <p>Depuis plusieurs années, je mets en place des actions qui permettent, selon moi, d'améliorer mon quotidien (dans les domaines du zéro déchet, de l'alimentation...).</p>
           </li>
           <li className="lg:w-1/3 ml-5 mt-5 mr-5 text-center">
             <Img
