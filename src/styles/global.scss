@@ -1,7 +1,14 @@
 @import './0_libraries/tailwind';
 
 @import '1_utils/1_utils';
+@import '4_modules/4_modules';
 
 body {
-  border-top: 5px solid #A9496F; // custom-pink
+  border-top: 5px solid $primaryColor;
 }
+
+.app-height {
+  min-height: calc(100vh - 5px);
+}
+
+

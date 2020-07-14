@@ -59,8 +59,6 @@ export default function IndexPage () {
     }
   `)
 
-  console.log(data);
-
   return (
     <Layout>
       <SEO title="Chloé Corfmat" />
@@ -180,7 +178,7 @@ export default function IndexPage () {
                 title="LinkedIn de Chloé Corfmat - Nouvelle fenêtre"
                 className="text-custom-pink hover:text-custom-violet"
               >
-                <FontAwesomeIcon icon={faLinkedin} size="lg" />
+                <FontAwesomeIcon icon={faLinkedin} size="lg" className="link-icon" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
             </li>
@@ -191,7 +189,7 @@ export default function IndexPage () {
                 title="Site web personnel de Chloé Corfmat"
                 className="text-custom-pink hover:text-custom-violet"
               >
-                <FontAwesomeIcon icon={faGlobeEurope} size="lg" />
+                <FontAwesomeIcon icon={faGlobeEurope} size="lg" className="link-icon" />
                 <span className="sr-only">Website</span>
               </Link>
             </li>
@@ -202,7 +200,7 @@ export default function IndexPage () {
                 title="Twitter de Chloé Corfmat - Nouvelle fenêtre"
                 className="text-custom-pink hover:text-custom-violet"
               >
-                <FontAwesomeIcon icon={faTwitter} size="lg" />
+                <FontAwesomeIcon icon={faTwitter} size="lg" className="link-icon" />
                 <span className="sr-only">Twitter</span>
               </Link>
             </li>
@@ -213,7 +211,7 @@ export default function IndexPage () {
                 title="Github de Chloé Corfmat - Nouvelle fenêtre"
                 className="text-custom-pink hover:text-custom-violet"
               >
-                <FontAwesomeIcon icon={faGithub} size="lg" />
+                <FontAwesomeIcon icon={faGithub} size="lg" className="link-icon" />
                 <span className="sr-only">Github</span>
               </Link>
             </li>
@@ -224,7 +222,7 @@ export default function IndexPage () {
                 title="Notion de Chloé Corfmat - Nouvelle fenêtre"
                 className="text-custom-pink hover:text-custom-violet"
               >
-                <FontAwesomeIcon icon={faPortrait} size="lg" />
+                <FontAwesomeIcon icon={faPortrait} size="lg" className="link-icon" />
                 <span className="sr-only">Notion</span>
               </Link>
             </li>*/}
@@ -235,7 +233,7 @@ export default function IndexPage () {
                 title="Linktr.ee de Chloé Corfmat - Nouvelle fenêtre"
                 className="text-custom-pink hover:text-custom-violet"
               >
-                <FontAwesomeIcon icon={faLink} size="lg" />
+                <FontAwesomeIcon icon={faLink} size="lg" className="link-icon" />
                 <span className="sr-only">Linktr.ee</span>
               </Link>
             </li>*/}
@@ -246,7 +244,7 @@ export default function IndexPage () {
                 title="Instagram de Chloé Corfmat - Nouvelle fenêtre"
                 className="text-custom-pink hover:text-custom-violet"
               >
-                <FontAwesomeIcon icon={faInstagram} size="lg" />
+                <FontAwesomeIcon icon={faInstagram} size="lg" className="link-icon" />
                 <span className="sr-only">Instagram</span>
               </Link>
             </li>
@@ -257,7 +255,7 @@ export default function IndexPage () {
                 title="Pinterest de Chloé Corfmat - Nouvelle fenêtre"
                 className="text-custom-pink hover:text-custom-violet"
               >
-                <FontAwesomeIcon icon={faPinterest} size="lg" />
+                <FontAwesomeIcon icon={faPinterest} size="lg" className="link-icon" />
                 <span className="sr-only">Pinterest</span>
               </Link>
             </li>

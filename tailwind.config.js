@@ -3,9 +3,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'custom-pink': '#A9496F',
-        'custom-violet': '#7D3553',
-        'custom-yellow': '#E1AF3B',
+        'custom-pink': '#556BA9',
+        'custom-violet': '#6A5F9E',
+        'custom-yellow': '#4B9C9B',
       }
     },
   },
